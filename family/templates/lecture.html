@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%  static 'css/lecture.css' %}" />
+    <title>Document</title>
+  </head>
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <div class="base">
+     
+        <h3><a href="{% url 'sem:video' course.id %}"> <button style="height: 40px;">video</button></a></h3>
+    
+      
+        <a href="{% url 'sem:pdf' course.id %}"><h3><button style="height: 40px;">pdf</button></h3></a>
+      
+        <a href="{% url 'sem:quest' course.id %}"><h3><button style="height: 40px;">imp questions</button></h3></a>
+    </div>
+  </body>
+</html>
